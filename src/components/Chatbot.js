@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import './Chatbot.css';
-import mascot from '../assets/dear-mascot.png';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +45,7 @@ const Chatbot = () => {
     <div className="chatbot-container" >
       <button className="chatbot-toggle" onClick={toggleChat}>
         <img 
-          src={mascot} 
+          src="/자산 1.svg" 
           alt="명지전문대학 챗봇" 
           className="chatbot-mascot"
         />
@@ -61,7 +60,12 @@ const Chatbot = () => {
           <h3>명지전문대학 챗봇</h3>
           <button className="close-btn" onClick={toggleChat}>×</button>
         </div>
-        <iframe src={process.env.REACT_APP_IFRAME_URL} title="명지전문대학 챗봇" />
+        <iframe 
+          src="http://localhost:3000" 
+          title="명지전문대학 챗봇"
+          scrolling="no"
+          style={{ overflow: 'hidden' }}
+        />
       </div>
     </div>
   );
