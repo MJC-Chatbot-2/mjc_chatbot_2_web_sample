@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Chatbot.css';
 import { isAuthenticated } from '../utils/auth';
+import mascotIcon from '../assets/mascot.svg';
 
 const CHATBOT_URL = process.env.REACT_APP_CHATBOT_URL || 'http://localhost:3000';
 
@@ -75,7 +76,7 @@ const Chatbot = () => {
     <div className="chatbot-container" >
       <button className="chatbot-toggle" onClick={toggleChat}>
         <img 
-          src="/자산 1.svg" 
+          src={mascotIcon}
           alt="명지전문대학 챗봇" 
           className="chatbot-mascot"
         />
