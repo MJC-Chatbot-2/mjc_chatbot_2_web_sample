@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import './Chatbot.css';
 import mascotIcon from '../assets/mascot.svg';
 
-const CHATBOT_URL = process.env.REACT_APP_CHATBOT_URL || 'http://10.51.61.37:3000';
+const CHATBOT_URL = process.env.REACT_APP_CHATBOT_URL || 'http://localhost:3000';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
