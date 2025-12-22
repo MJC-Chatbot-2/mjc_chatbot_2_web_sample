@@ -3,7 +3,7 @@ import './Chatbot.css';
 import { isAuthenticated } from '../utils/auth';
 import mascotIcon from '../assets/mascot.svg';
 
-const CHATBOT_URL = process.env.REACT_APP_CHATBOT_URL || 'http://localhost:3000';
+const CHATBOT_URL = process.env.REACT_APP_CHATBOT_URL || 'http://10.51.61.37:3000';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,6 +75,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container" >
       <button className="chatbot-toggle" onClick={toggleChat}>
+        <span className="chatbot-label">MJC Chatbot</span>
         <img 
           src={mascotIcon}
           alt="명지전문대학 챗봇" 
